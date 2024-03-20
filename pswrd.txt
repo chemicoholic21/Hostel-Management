@@ -1,0 +1,35 @@
+Login Details for admin : admin/Test@1234
+Login Details for user : test@gmail.com/Test@123
+
+
+
+
+
+Q1:ROOMS QUERY
+select * from rooms 
+where fees = 6000 
+group by id 
+order by id;
+
+Q2:WORKERS QUERY
+select * from workers 
+where name like "Ratana%";
+
+Q3:COURSES QUERY
+select * from courses 
+where course_fn like "master%" 
+group by course_fn 
+order by id;
+
+Q4:STUDENTS QUERY
+SELECT firstName,lastName,regno,contactno,roomno,r.seater,stayfrom 
+from (registration as reg 
+JOIN 
+rooms as r 
+on reg.roomno=r.room_no)
+where firstname="srishti";
+
+Q5:DASHBOARD QUERY
+SELECT COUNT(*) from registration;
+SELECT COUNT(*) from rooms;
+SELECT COUNT(*) from courses;
